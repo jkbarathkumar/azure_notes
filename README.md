@@ -25,3 +25,21 @@ A Hybrid Cloud is a type of cloud computing environment that combines **on-premi
 -   **Seamless integration** between private and public cloud environments.
 -   **Secure communication** between on-premises systems and cloud systems (often using VPNs, Direct Connect, or ExpressRoute).    
 -   Allows organizations to gradually move to the cloud without fully migrating all their infrastructure.
+
+
+
+
+#### VNet
+- It is a private, isolated network in the cloud that allows you to securely connect different resources such as virtual machines, databases, and other services within a specific environment.
+- **Connectivity**:
+	- **Subnets**: You can create multiple subnets to organize resources based on their roles, security requirements, or other factors.
+	-   **Peering**: Virtual networks can be connected with each other via VNet Peering, allowing resources in different VNets to communicate securely.
+	-   **VPN Gateway**: If you want to connect your on-premises network to the VNet, you can use a VPN Gateway to establish a secure connection over the internet.
+-    **Security**: VNets are integrated with Azure's security features, such as Network Security Groups (NSGs) and Azure Firewall, to control the flow of traffic in and out of the network. You can define rules based on IP addresses, ports, and protocols.
+-   **Public and Private Endpoints**: Azure allows you to define private IP addresses for resources in the VNet, but you can also expose certain resources to the public internet using public IPs or load balancers.
+	- ### Example:
+	- Imagine you're deploying a multi-tier web application in a cloud environment:
+		-   You might have a **public subnet** for web servers that need to be accessed over the internet.
+		-   You could place **database servers** in a **private subnet** that are not directly accessible from the outside world.
+		-   The resources in these subnets can communicate with each other over the private VNet network, providing secure and efficient interaction without exposing sensitive services like databases to the public internet.
+
