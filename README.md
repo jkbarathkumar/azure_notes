@@ -43,3 +43,22 @@ A Hybrid Cloud is a type of cloud computing environment that combines **on-premi
 		-   You could place **database servers** in a **private subnet** that are not directly accessible from the outside world.
 		-   The resources in these subnets can communicate with each other over the private VNet network, providing secure and efficient interaction without exposing sensitive services like databases to the public internet.
 
+
+
+#### Bastion
+- It acts as a **secure gateway** to access other servers or resources within a private network. 
+- It's typically used to provide controlled access to **internal systems** in a **private subnet** from an **external network** (such as the internet), while minimizing exposure to security risks.
+### How a Bastion Host Works:
+
+-   **External Access**: The Bastion Host is placed in a **public subnet** (accessible from the internet) while the resources it provides access to (like web servers, databases, etc.) are placed in **private subnets** (not accessible from the internet).
+    
+-   **Secure Access Method**: Users or administrators connect to the Bastion Host first, and once connected, they can access other internal servers and resources through secure means (SSH, RDP, etc.).
+    
+
+#### Example Flow:
+
+1.  A user wants to access a private server within a cloud network.
+    
+2.  The user first connects to the **Bastion Host** via SSH (for Linux) or RDP (for Windows), using strong authentication (e.g., a public-private key pair or multi-factor authentication).
+    
+3.  Once connected to the Bastion Host, the user can then **SSH or RDP** into the private server (behind the Bastion Host) without that server being directly exposed to the public internet.
