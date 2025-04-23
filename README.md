@@ -62,3 +62,15 @@ A Hybrid Cloud is a type of cloud computing environment that combines **on-premi
 2.  The user first connects to the **Bastion Host** via SSH (for Linux) or RDP (for Windows), using strong authentication (e.g., a public-private key pair or multi-factor authentication).
     
 3.  Once connected to the Bastion Host, the user can then **SSH or RDP** into the private server (behind the Bastion Host) without that server being directly exposed to the public internet.
+
+
+
+### Availability Set
+ - An **Availability Set** in Azure is a `grouping of virtual machines (VMs)` designed to ensure `high availability` by distributing them across different `fault and update domains`.
+ - It protects your app from `downtime` due to hardware failures or planned maintenance.
+### Scale sets
+- Create and manages a group of load balancer VMs.
+- Supports manual scaling and Auto Scaling
+
+
+
