@@ -109,4 +109,60 @@ For public
 
 
 
+Hierarchy of Scope Levels in Azure
+Azure has a structured hierarchy for organizing and managing access. From the broadest to the most specific, the levels are:
+
+🔹 1. Tenant Level (Directory-Level)
+Also called: Azure Active Directory (AAD) level
+
+What it is: The overall identity and directory level that contains users, groups, domains, and policies.
+
+Roles here:
+
+Global Administrator
+
+User Administrator
+
+Security Reader, etc.
+
+Applies to: Entire directory and identity-related resources
+
+Portal navigation: Azure Active Directory (not part of resource groups)
+
+🔹 2. Management Group
+What it is: A way to organize multiple subscriptions under a single hierarchy (for large orgs).
+
+Roles here: RBAC roles like Owner, Reader, etc.
+
+Use case: Apply policies, role assignments, or budgets across multiple subscriptions.
+
+Example: Assign a policy to enforce tagging rules on all subscriptions under a business unit.
+
+🔹 3. Subscription Level
+What it is: A container for billing, services, and deployed resources.
+
+Roles here: RBAC roles (Owner, Contributor, Reader) affect all resources in the subscription.
+
+Use case: Control who can deploy or manage resources in a specific subscription.
+
+🔹 4. Resource Group Level
+What it is: A logical container for grouping related resources (VMs, storage, network).
+
+Roles here: Apply to all resources inside the group.
+
+Use case: Give a team access to manage only a particular application’s resources.
+
+🔹 5. Resource Level
+What it is: Individual Azure services (e.g., a specific VM, storage account).
+
+Roles here: Very granular control (e.g., only give access to one VM).
+
+Use case: Least privilege access to specific items.
+
+![image](https://github.com/user-attachments/assets/67251105-9a12-4ce6-aa33-1980d9dfc3fc)
+
+
+
+
+
 
