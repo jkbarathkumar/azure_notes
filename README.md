@@ -74,3 +74,39 @@ A Hybrid Cloud is a type of cloud computing environment that combines **on-premi
 
 
 
+
+
+
+
+
+
+
+##Create VNet,VMs and NSG
+### Vnet
+![image](https://github.com/user-attachments/assets/34509d1c-5e1b-4f47-9260-188b82068f7a)
+
+
+### Three subnets
+![image](https://github.com/user-attachments/assets/788ebb0b-4ff7-4e70-b765-74924295df21)
+![image](https://github.com/user-attachments/assets/e7ae9653-d74e-407a-92fb-6a50ace14530)
+![image](https://github.com/user-attachments/assets/fa9b4788-bb77-4dc1-be14-ab32fa1bb0fa)
+![image](https://github.com/user-attachments/assets/b954b7af-915c-47ff-b660-f28595c2a901)
+
+
+### Three VM's
+![image](https://github.com/user-attachments/assets/a8de9905-303a-4b4b-a87b-e515f0e2968a)
+
+### NSG
+
+For private
+![image](https://github.com/user-attachments/assets/a33885dd-cd1f-46bd-a9a0-1a51a991d9c8)
+
+For public
+![image](https://github.com/user-attachments/assets/56eb77ba-abbe-4717-8115-55120489ce1a)
+
+
+
+
+
+
+
