@@ -163,6 +163,21 @@ Use case: Least privilege access to specific items.
 
 
 
+#
+## Azure playbooks
+### Azure automation accounts
+- An **Automation Account** is a **cloud service in Azure** that helps you **automate repetitive tasks** across your Azure and non-Azure environments.
+- It's part of **Azure Automation**, and it gives you a **central place** to run scripts, manage configurations, and handle maintenance — all without manual intervention.
+
+
+![image](https://github.com/user-attachments/assets/e75aac86-d47d-4ef6-9e41-7b7911c952ad)
+
+
+## 🔐 What is a Managed Identity in Azure?
+A Managed Identity is a feature in Azure that provides an automatically managed identity for your Azure services (like VMs, Automation Accounts, Logic Apps, etc.) so they can authenticate to other Azure resources without needing passwords or secrets.
+
+
+
 
 
 
