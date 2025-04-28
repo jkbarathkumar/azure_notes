@@ -182,8 +182,11 @@ A Managed Identity is a feature in Azure that provides an automatically managed 
 
 ## Terraform using Azure
 ### Terraform basics
-
+- Terraform is a tool that helps you manage and automate the setup of your infrastructure (like virtual machines, databases, networks, etc.) using code.
+- In simple terms 'tool for managing your cloud resources through code'
 ### Terraform files
+- State File (terraform.tfstate)
+ - The state file is crucial for tracking the current state of your infrastructure. Terraform maintains a record of all the resources it manages in this file. It is automatically generated and updated as Terraform applies changes to the infrastructure.
 
 ### Terraform basic commands
 - **`terraform init`**    - Initializes the Terraform working directory.
