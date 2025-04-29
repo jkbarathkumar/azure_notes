@@ -1,7 +1,27 @@
-## Terraform using Azure
+## Terraform(IaC Tool) using Azure
 ### Terraform basics
 - To automate and manage your infrastructure, your platform and services that run on that platform.
 - Tool for infrastructure provisioning
+  
+🔧 `Purpose`
+Terraform: Builds and provisions infrastructure (servers, networks, cloud resources).
+Ansible: Configures and manages software and settings on infrastructure.
+
+⚙️ `How They Work`
+Terraform: Uses declarative language (you describe the desired state).
+Ansible: Mostly procedural (you write the steps to reach the state).
+
+🔁 `State Management`
+Terraform: Maintains a state file to track resources.
+Ansible: Stateless; it checks the current state during each run.
+
+☁️ `Use Cases`
+Terraform: Ideal for cloud provisioning (AWS, Azure, GCP).
+Ansible: Best for configuration management (installing packages, setting configs).
+
+![image](https://github.com/user-attachments/assets/8784567f-6f62-47b2-bb1c-3e836dc8ac90)
+
+
 ### Terraform files
 - State File (terraform.tfstate)
  - The state file is crucial for tracking the current state of your infrastructure. Terraform maintains a record of all the resources it manages in this file. It is automatically generated and updated as Terraform applies changes to the infrastructure.
