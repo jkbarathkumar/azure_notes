@@ -1,6 +1,6 @@
 ## Terraform(IaC Tool) using Azure
 ### Terraform basics
-- To automate and manage your infrastructure, your platform and services that run on that platform.
+- Terraform is a tool that helps you manage and automate the setup of your infrastructure (like virtual machines, databases, networks, etc.) using code.
 - Tool for infrastructure provisioning
   
 🔧 `Purpose`
