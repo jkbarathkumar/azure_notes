@@ -26,6 +26,13 @@ Ansible: Best for configuration management (installing packages, setting configs
 - State File (terraform.tfstate)
  - The state file is crucial for tracking the current state of your infrastructure. Terraform maintains a record of all the resources it manages in this file. It is automatically generated and updated as Terraform applies changes to the infrastructure.
 
+`Issues in tfstate file`
+- If two people are working on the same project and making changes at the same time, a conflict may occur.
+
+`Resolve`
+- To resolve this conflict, we can enable state locking so that only one operation can modify the tfstate file at a time.
+
+
 ### Terraform basic commands
 - **`terraform init`**    - Initializes the Terraform working directory.
   ![image](https://github.com/user-attachments/assets/f49caf21-7453-4701-a8bc-d214072ceda2)
