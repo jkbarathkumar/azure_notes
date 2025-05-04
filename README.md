@@ -67,7 +67,10 @@ A Hybrid Cloud is a type of cloud computing environment that combines **on-premi
 
 ### Availability Set
  - An **Availability Set** in Azure is a `grouping of virtual machines (VMs)` designed to ensure `high availability` by distributing them across different `fault and update domains`.
- - It protects your app from `downtime` due to hardware failures or planned maintenance.
+ - It protects your app from `downtime` due to hardware failures(fault) or planned maintenance(update).
+ - Azure guarantees `99.95% uptime` SLA (Service Level Agreement) for your VMs in an availability set.
+ - This helps reduce downtime and improve application reliability.
+ - If we need 99.99% means deploy two or more instances in two or more Availability zones in the same Azure region: 99.99%
 ### Scale sets
 - Create and manages a group of load balancer VMs.
 - Supports manual scaling and Auto Scaling
