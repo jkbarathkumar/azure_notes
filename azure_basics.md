@@ -41,6 +41,9 @@ IAM roles
 Budget,cost alert
 
 
+Azure storage (https://www.notion.so/Azure-Cloud-Storage-e692d8c6c1564a0a8ac0a5d4c68302f7?pvs=4)
+
+
 Terraform using azure
 
 
