@@ -42,39 +42,36 @@ Ansible: Best for configuration management (installing packages, setting configs
 
 
 
-
-
-
-
-
-
-
-
 ### Terraform basic commands
 - **`terraform init`**    - Initializes the Terraform working directory.
-  ![image](https://github.com/user-attachments/assets/f49caf21-7453-4701-a8bc-d214072ceda2)
-
 - **`terraform plan`** - Creates an execution plan (dry run).
 	-    **Created**: Resources that don’t exist yet, according to the configuration, are marked as `+ create`.
-        
     -   **Updated**: Resources that need changes are marked as `~ update`.
-        
     -   **Destroyed**: Resources that are no longer in the configuration are marked as `- destroy`.
-      ![image](https://github.com/user-attachments/assets/925e1f28-dac5-4806-9c8c-0f9bf61da320)
-
+      
 - **`terraform apply`**: Applies the changes to your infrastructure.
-![image](https://github.com/user-attachments/assets/4aebbe15-10b9-46e2-bb22-7e129a74d6b2)
-
 - **`terraform destroy`**: -   Destroys all resources defined in your configuration.
-![image](https://github.com/user-attachments/assets/2c6c0ab2-4f99-47c6-9f24-3d5b66ffe2df)
-
 - **`terraform fmt`** -   Formats the Terraform configuration files to standardize them.
-![image](https://github.com/user-attachments/assets/93e0eda2-73a5-4f9b-9443-33e434a1328a)
-
 - **`terraform validate`** - Validates the syntax of the configuration files
-
-![image](https://github.com/user-attachments/assets/7737d259-e0d2-4490-8a2f-16a3bc2043a8)
-
 - **`terraform show`**  - Displays the Infrastructure
-![image](https://github.com/user-attachments/assets/fc5a16ec-f926-4d2d-9acd-4eba77763cba)
 
+
+### Terraform Lifecycle
+- In Terraform, the lifecycle block is a way to control how resources are managed during their lifecycle—specifically when Terraform is `planning, creating, updating, or destroying infrastructure`. It provides settings that let you override the default behavior.
+ 1. `create_before_destroy`
+    - This ensures that a `new resource` is `created before the old one is destroyed` when a change requires replacement.
+    - This is useful to avoid downtime, especially for resources like compute instances, load balancers, or DNS records.
+ 2. `prevent_destroy`
+
+    - The prevent_destroy lifecycle argument `protects a resource from accidental or intentional destruction`.
+    - With `prevent_destroy = true`: Terraform will refuse to destroy the resource, protecting critical infrastructure like databases, load balancers, or production servers
+3. `ignore_changes`
+
+    - The ignore_changes setting tells Terraform to ignore changes to specific arguments of a resource after it has been created — even if those arguments differ from what's in your .tf configuration. This is useful when:
+    - A setting is managed outside Terraform (e.g., manually or by another tool).
+    - A setting frequently changes (e.g., tags or user-assigned IPs) and you don’t want Terraform to constantly try to revert it.
+      ## Example Use Case: Azure Virtual Machine Tags
+	- Imagine you're using Azure Virtual Machines, and a monitoring tool automatically adds or modifies tags. You don’t want Terraform to reset those tags every time you apply.
+
+
+##
