@@ -32,6 +32,23 @@ Ansible: Best for configuration management (installing packages, setting configs
 `Resolve`
 - To resolve this conflict, we can enable state locking so that only one operation can modify the tfstate file at a time.
 
+### Terraform versions
+- `=` Exaact version
+- `!=` Exclude the exact version
+- `>, >=, <, <=` Allow version when comparision is true.
+- `~>` Only allow the right most increment
+	Eg: ~> 1.0.4 (Tf can install 1.0.5, 1.0.10 But not 1.1.0)
+	    ~? 1.1 (Tf can install 1.2, 1.10 but not 2.0)
+
+
+
+
+
+
+
+
+
+
 
 ### Terraform basic commands
 - **`terraform init`**    - Initializes the Terraform working directory.
