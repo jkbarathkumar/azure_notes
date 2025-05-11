@@ -164,6 +164,7 @@ Use case: Least privilege access to specific items.
 
 ![image](https://github.com/user-attachments/assets/67251105-9a12-4ce6-aa33-1980d9dfc3fc)
 
+![scope-levels](https://github.com/user-attachments/assets/aefec77c-6beb-4df0-a9dd-7adae37db11b)
 
 
 #
