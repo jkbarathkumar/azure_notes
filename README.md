@@ -183,3 +183,14 @@ A Managed Identity is a feature in Azure that provides an automatically managed 
 
 
 
+
+An Azure Service Principal is a security identity used by applications, services, and automation tools to access specific Azure resources. It acts as a user identity for apps, but with restricted permissions, following the principle of least privilege.
+🔍 What Is a Service Principal?
+
+When you register an application in Azure Active Directory (Azure AD), you create an Application Object. To give that application permissions to access resources in a specific tenant or subscription, Azure creates a Service Principal in that tenant.
+
+You can think of it like this:
+Object	Description
+Application (App Registration)	Global definition of an app in Azure AD (like a blueprint).
+Service Principal	Instance of the app within a tenant, with permissions and identity.
+
