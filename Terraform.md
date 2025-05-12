@@ -55,6 +55,18 @@ Ansible: Best for configuration management (installing packages, setting configs
 - **`terraform validate`** - Validates the syntax of the configuration files
 - **`terraform show`**  - Displays the Infrastructure
 
+### What Happens When You Run terraform init?
+- Validates backend configuration
+  	- Checks if a remote backend is configured (e.g., Azure Blob, S3, Terraform Cloud).
+  	- If so, it initializes and connects to the backend for storing state remotely.
+
+- Initializes the working directory
+	- Prepares the folder containing your `.tf` files for use.
+   	- Creates the `.terraform/` subdirectory (for internal data).
+
+- Downloads provider plugins
+  - Based on the provider blocks (e.g., `azurerm, aws, google`), Terraform downloads the required provider binaries.
+  - These plugins are stored locally in `.terraform/providers/`
 
 ### Terraform Lifecycle
 - In Terraform, the lifecycle block is a way to control how resources are managed during their lifecycle—specifically when Terraform is `planning, creating, updating, or destroying infrastructure`. It provides settings that let you override the default behavior.
